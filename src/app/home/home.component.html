@@ -4,7 +4,7 @@
       <button mat-button  class="logout" mat-icon-button routerLink="/login" >
           <mat-icon>logout</mat-icon>
         </button>
-    <a class="header">Welcome to My Scheduling App</a>
+    <a class="header">Welcome to My Scheduling App Home Page</a>
     <a *ngIf="this.ms.getNonAdminAccess()" class="welcome">Hi {{userfirstname}}&nbsp;&nbsp;</a>
     <a *ngIf="this.ms.getAdminAccess()" class="welcome">&nbsp;&nbsp;</a>
   <br>
