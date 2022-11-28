@@ -63,14 +63,13 @@
       <button style="border-collapse: collapse; border-radius: 25px;" (click) = submit()  mat-raised-button color="primary">Create Account</button>
     </div><br>
 
-    <mat-icon style=" color:blue" >info_outline</mat-icon>
-    <br><br>
     <a (click) = "hint()"> 
        &nbsp;
-       <mat-icon style="vertical-align:middle; height:16px; width:16px; font-size:16px; ; color:blue" >info_outline</mat-icon>&nbsp;<a class= "passwordrules" >Password rules:</a><br><br>
+       <span class="material-icons" style="vertical-align:middle; height:16px; width:16px; font-size:16px; ; color:blue" >info_outline</span>&nbsp;<a class= "passwordrules" >Password rules:</a><br><br>
     </a> 
  
-    <a *ngIf="pwhint" class="desc-box" >
+    <!--a *ngIf="pwhint" class="desc-box" -->
+     <a class="desc-box" >
       <p class="textleft">
        <b>Your password must follow these 6 rules:</b><br>
        &nbsp;&nbsp;1. Must be between 8 and 30 characters.<br>
@@ -80,7 +79,7 @@
        &nbsp;&nbsp;5. Must contain at least one special character from the set: ! @ # $ % ^ & *  ( ) - _<br>
        &nbsp;&nbsp;6. Must not contain any other characters
       </p>
-    </a>
+    </a >
 
 </form>
 <br><br><br><br><br><br>

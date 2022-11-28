@@ -42,7 +42,8 @@
    padding: 10px;
    border-style: dotted ;
    font-size: 12px;
-   color: rgb(94, 95, 95);
+   /*color: rgb(94, 95, 95);*/
+   color: black;
    border-width: 0.1px;    
    width: 80%;
    height: 50%;
