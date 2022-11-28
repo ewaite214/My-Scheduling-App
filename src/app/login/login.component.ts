@@ -4,7 +4,6 @@ import { MyService } from '../services/my-service.service';
 import { Router, ActivatedRoute } from '@angular/router'
 import { NavigationService } from '../navigation.service';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material";
-import { ForgotpwdialogComponent } from '../forgotpwdialog/forgotpwdialog.component';
 
 @Component({
   selector: 'app-login',
