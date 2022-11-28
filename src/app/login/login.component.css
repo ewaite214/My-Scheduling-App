@@ -1,0 +1,79 @@
+.error{
+  text-align: center;
+  color:red;
+}
+.fakehref{
+  color:blue;
+  cursor: pointer;
+}
+
+.links{
+  text-align: center;
+   color: rgb(87, 87, 87);
+}
+
+.background {
+  text-align:center;
+}
+
+.hrdivider {
+  position:relative;
+  margin-bottom: 20px;
+  width: 30%;
+  text-align:center;
+  float: initial;
+}
+
+.hrdivider span {
+  position: relative;
+  top: -20px;
+  background: #fff;
+  padding:0.1em 1.5em;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.mat-form-field {
+  width: 60%;
+  font-size:12px;
+}
+
+.LoginButton{
+  width: 30%;
+  height: 5%;
+  border-radius: 100px;
+}
+
+.create-account {
+  border: none;
+  background-color: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: rgb(106, 106, 106);
+  box-shadow: none;
+  }
+
+.forgot-password{
+  border: none;
+  background-color: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: rgb(106, 106, 106);
+  box-shadow: none;
+}
+
+.remember-me{
+  border: none;
+  background-color: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: rgb(106, 106, 106);
+  box-shadow: none;
+}

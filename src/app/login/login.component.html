@@ -1,0 +1,47 @@
+<body>
+  <div style="padding-top: 30px;">
+  <a>  
+     <mat-icon color="primary" class="material-icons-outline" style="height:70px; width:70px; font-size:70px;">
+     account_circle
+     </mat-icon>
+  </a>
+  </div>
+  <div style="text-align:center;">
+    <form flex [formGroup]="LoginForm">
+      <div fxLayout="column" fxLayoutAlign="space-around center">
+        <mat-form-field>
+          <input matInput  placeholder="Username" name="Login_Username"  formControlName="Login_Username">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" name="Login_Password"  formControlName="Login_Password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+      </div>
+    </form>
+  </div><br>
+  <div style="text-align:center;">
+    <div>
+      <button class="LoginButton" mat-raised-button color="primary" (click)=submit()>Login</button>
+    </div><br>
+    
+    <div style="text-align:center;" class="error">
+      <a> {{errorMessage}} </a>
+    </div><br>
+  
+    <div style="text-align:center;">
+      <div class="links">
+        <input type="checkbox" value="lsRememberMe" id="rememberMe">
+        <label for="rememberMe" class="remember-me"> Remember me</label><br><br><br>
+        <div style="text-align:center;" >
+          -------------------- or ---------------------
+        </div><br>
+        <a class="fakehref" color="primary" (click)=signup()>Create Account</a>
+        <br><br>
+        <a class="fakehref" color="primary" (click)=forgotpwDialog()>Forgot Password?</a>
+      
+    </div>
+  <br>
+  </div><br>
+  </div>
