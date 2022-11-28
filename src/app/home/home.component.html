@@ -1,0 +1,98 @@
+<body width="100%">
+  <div class="background"> 
+  <div style="padding-top: 30px; text-align:center;">
+      <button mat-button  class="logout" mat-icon-button routerLink="/login" >
+          <mat-icon>logout</mat-icon>
+        </button>
+    <a class="header">Welcome to My Scheduling App</a>
+    <a *ngIf="this.ms.getNonAdminAccess()" class="welcome">Hi {{userfirstname}}&nbsp;&nbsp;</a>
+    <a *ngIf="this.ms.getAdminAccess()" class="welcome">&nbsp;&nbsp;</a>
+  <br>
+  </div>
+  <div *ngIf="this.ms.getAdminAccess()" width="100%" class="adminheader">
+    <br><br><br><br><br><br><br><br><br>
+       <a>Administrator Maintenance</a>
+  </div>
+  <div *ngIf="this.ms.getAdminAccess()" class="center">
+  <br><br><br>
+    <div fxLayoutGap fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1px grid" > 
+      <mat-card class="admin-desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/usermaintenance" (click)="close()">
+         <mat-icon style="height:48px; width:48px; font-size:48px">person</mat-icon>
+        </button>
+        <p class="boxtext">
+          <a>User</a><br>
+          <a>Maintenance</a>
+        </p>
+      </mat-card>
+  
+      <mat-card class="admin-desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/listuser" (click)="close()">
+         <mat-icon style="height:48px; width:48px; font-size:48px">people</mat-icon>
+        </button><br>
+         <a class="boxtext">List Users</a>
+      </mat-card>
+    </div>
+    <br><br>
+    <div fxLayoutGap fxLayout="row" fxLayoutAlign="center center"  fxLayoutGap="1px grid"> 
+      <mat-card class="admin-desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/cleardatabase" (click)="close()">
+         <mat-icon style="height:48px; width:48px; font-size:48px">restart_alt</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Clear Database</a>
+      </mat-card>
+    </div>
+    <br><br><br><br>
+  </div>
+  <br><br><br><br> <br><br><br><br>
+  
+  <div *ngIf="this.ms.getNonAdminAccess()" class="center">
+  
+    <div fxLayoutGap fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1px grid" class="boxrow"> 
+      <mat-card class="desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/listassessment" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">assessment</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Assessment</a>
+      </mat-card>
+      <mat-card class="desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/listexam" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">quiz</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Exam</a>
+      </mat-card>
+    </div>
+    <br>
+    <div fxLayoutGap fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1px grid" >
+      <mat-card  class="desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/countdown" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">history</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Countdown</a>
+      </mat-card >
+  
+      <mat-card  class="desc-box-mc">
+        <button class="largebutton"mat-button mat-icon-button color="primary" routerLink="/subjectsummary" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">collections_bookmark</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Subject &nbsp;Overview</a>      
+      </mat-card >
+    </div>
+    <br>
+    <div fxLayoutGap fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1px grid" >
+      <mat-card class="desc-box-mc">
+        <button class="largebutton" mat-button mat-icon-button color="primary" routerLink="/mysubjects" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">auto_stories</mat-icon>
+        </button><br>
+         <a class="boxtext">Subjects</a>
+      </mat-card >
+  
+      <mat-card  class="desc-box-mc">
+        <button class="largebutton"mat-button mat-icon-button color="primary" routerLink="/myaccount" (click)="close()">
+         <mat-icon style="height:46px; width:46px; font-size:46px">account_circle</mat-icon>
+        </button><br>
+         <a class="boxtext">&nbsp;Account</a>
+      </mat-card >
+    </div>
+  
+    <br><br><br><br><br><br> 
