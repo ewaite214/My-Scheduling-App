@@ -1,3 +1,113 @@
-p {
-  font-family: Lato;
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+.topBar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.footer {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 9%;
+    vertical-align: text-bottom;
+    background-color:rgb(54, 87, 126) ;
+}
+.footerMenu{
+  width:100%;
+  font-size:10px;
+}
+.footertext{
+  font-size:10px;
+  color: white;
+}
+.footeritems{
+  vertical-align: text-bottom;
+  width: 80%;
+}
+.footeritem{
+  vertical-align: text-bottom;
+  text-align: center;
+}
+.brsmall {
+  display: block;
+  margin-bottom: -.9em;
+ }
+
+.mat-tab-label-active {
+  color: rgb(0, 255, 242) !important;
+}
+
+.mat-tab-labels {
+  background-color:rgb(54, 87, 126) ;
+  font-size: 10px !important;
+}
+
+.mat-tab-label {
+  color: rgb(248, 248, 248);
+   opacity: 1 !important;
+   width: 100%;
+}
+
+.mat-ink-bar {
+    background-color: rgb(39, 184, 176) !important;
+    top: 35px;
+}
+
+.mat-sidenav-container{
+  padding:0px;
+}
+.mat-sidenav-content{
+  padding-top: 0px;
+  padding-left: 0px;
+}
+.mat-sidenav {
+    position: fixed;
+    padding-top: 75px; 
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: rgba(0, 4, 120, 0.5);
+}
+.mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item{
+    color:#FFF;
+    width: 200px;
+}
+.mat-list-item:hover {
+  background-color: darkgray ;
+  color: black; 
+}
+
+.mat-list-item:hover {
+  background-color: darkgray ;
+}
+
+.mat-list-icon {
+    color:  beige; 
+    padding:4px;
+}
+.numdaybox{
+  text-align: center;
+  color: white;
+  font-size:22px;
+}
+.descbox{
+  text-align: left;
+  margin-left: 10pt;
+  padding-left: 12pt;
+  font-size:14px;
+}
+.iconbox{
+  text-align: left;
+  margin-left: 10pt;
+  padding-left: 12pt;
+  font-size:12px;
+  vertical-align: middle;
 }
