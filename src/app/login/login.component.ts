@@ -35,20 +35,6 @@ export class LoginComponent implements OnInit {
     this.ms.clearActivetasktype()
   }
 
-  forgotpwDialog(): void {
-
-      const forgotpwdialogConfig: MatDialogConfig = {
-            width: '500px',
-            height: '275px'
-      };  //end dialogConfig
-      //
-
-      this.dialog.open(ForgotpwdialogComponent, forgotpwdialogConfig)
-      .afterClosed()
-      .subscribe(value => {
-        }
-      );
-  } 
 
   signup(){
     this.route.navigate(['signup'])
