@@ -51,9 +51,9 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
-import {NavigationService} from './navigation.service';
-import {BackButtonDirective} from './back-button.directive';
 import { HelloComponent } from './hello.component';
+import { NavigationService } from './navigation.service';
+import { BackButtonDirective } from './back-button.directive';
 
 // ROUTING
 const appRoutes: Routes = [
@@ -109,7 +109,8 @@ const appRoutes: Routes = [
           //  { enableTracing: true } // <-- debugging purposes only
       )
   ],  // end imports
-  declarations: [AppComponent, HomeComponent, LoginComponent, SignupComponent, HelloComponent ],    bootstrap: [AppComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, SignupComponent, HelloComponent, BackButtonDirective],    
+  bootstrap: [AppComponent],
   providers: [MyService, NavigationService, {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
   entryComponents: [LoginComponent]    
 })
