@@ -1,1 +1,66 @@
-/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*
+deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css
+*/
+
+html, body{
+    font-family: 'Roboto', sans-serif, Arial, Helvetica, 'Gill Sans', 'Gill Sans MT', Calibri;
+    height:100%;
+    background-color: white;
+}
+body{
+    margin: 0;    
+    text-align:center;
+}
+.smallRadio .mat-radio-container{
+    height: 13px;
+    width: 13px;
+    opacity: 1; 
+    border-color: #3f51b5;
+    color:#3f51b5;
+}
+.smallRadio .mat-radio-outer-circle{
+    height: 13px;
+    width: 13px;
+    border-color: #3f51b5;
+}
+.smallRadio .mat-radio-inner-circle{
+    height: 13px;
+    width: 13px;
+    border-color: #3f51b5;
+    background-color: #3f51b5;
+}
+.smallRadio .mat-radio-button .mat-radio-ripple{
+    height: 13px; 
+    width: 13px; 
+    left: calc(50% - 20px); 
+    top: calc(50% - 20px); 
+    border-color: #3f51b5;
+    background-color: #3f51b5;
+    opacity: 0; 
+}
+.smallRadio .mat-accent .mat-radio-checked .mat-radio-ripple .mat-ripple-element{
+  border-color: #3f51b5;
+  height: 13px;
+  width: 13px;
+}
+.mat-radio-ripple .mat-ripple-element {
+  background-color: rgba(#3f51b5, 0.26);
+}
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+   opacity: 0.5; /*click effect color change*/
+   background-color: #422873;  
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+   background-color: #422873; /*inner circle color change*/  
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+   border-color: #422873; /*outer ring color change*/  
+}
+.mat-mini-fab {  
+    font-size: 10px; 
+}
