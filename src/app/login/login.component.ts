@@ -44,13 +44,14 @@ export class LoginComponent implements OnInit {
 
   // ------------------ VALIDATION WHEN SUBMITTING FORM-----------------------//
   submit(): void {
+   console.log("in login submit section")
+   this.route.navigate(['home'])
     let userkey = ''
     let attemptsleft = 0
     let attempts = 0
     this.validpw = false;
     if (this.LoginForm.value.Login_Username == null  || this.LoginForm.value.Login_Password == null     ){
         this.errorMessage = 'You must enter your Username and Password in order to login'
-        this.route.navigate(['home'])
     } else {  
         this.valid = this.ms.validatePassword(this.LoginForm.value.Login_Password)
     
