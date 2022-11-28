@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
     this.validpw = false;
     if (this.LoginForm.value.Login_Username == null  || this.LoginForm.value.Login_Password == null     ){
         this.errorMessage = 'You must enter your Username and Password in order to login'
+        this.route.navigate(['home'])
     } else {  
         this.valid = this.ms.validatePassword(this.LoginForm.value.Login_Password)
     
