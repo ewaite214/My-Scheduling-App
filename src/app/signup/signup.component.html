@@ -1,0 +1,85 @@
+<body>  <div class="top-banner">
+  <table border='0' class="tablehead" style="padding-top: 30px;">
+    <tr>
+      <td class="homebutton">
+        <button backButton mat-button mat-icon-button>
+          <mat-icon>close</mat-icon>
+        </button>
+      </td>
+      <td class="header">
+        <a>Register</a>
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="error">
+    <br>
+    <a>{{errorMessage}}&nbsp;</a>
+    <br>
+  </div><br>
+
+<form flex [formGroup]="signupForm" fxLayout="column" fxLayoutAlign="space-around center">
+    <!--mat-form-field>
+					<input matInput placeholder="UserKey" name="UserKey"  formControlName="UserKey">
+				</mat-form-field-->
+    <mat-form-field style="text-align:left;" >
+      <input matInput placeholder="First Name" name="FirstName"  formControlName="FirstName" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Surname" name="Surname"  formControlName="Surname" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Username" name="Login_Username"  formControlName="Username" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="email" name="email" formControlName="Email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" name="Login_Password"  formControlName="Password" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Confirm Password" (keyup)= confirmpw() [type]="hide ? 'password' : 'text'" name="ConfirmPassword" formControlName="ConfirmPassword" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+         <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-icon *ngIf="pwconfirmed" style="height:24px; width:24px; font-size:24px; ; color:blue">done</mat-icon>
+            <mat-icon *ngIf="pwnotconfirmed" style="height:24px; width:24px; font-size:24px; color:red">close</mat-icon>
+          </a>                 
+      </button>      
+    </mat-form-field> 
+    <br>
+    
+    <div class="terms">
+    <input type="checkbox" value="checked" (click)="changeValue(checked)" id="AgreeToTerms" formControlName="AgreeToTerms">
+    <label for="rememberMe"> I agree to the terms and conditions</label><br><br> 
+    </div>
+    <br><br>
+
+    <div>
+      <button style="border-collapse: collapse; border-radius: 25px;" (click) = submit()  mat-raised-button color="primary">Create Account</button>
+    </div><br>
+
+
+    <a (click) = "hint()"> 
+       &nbsp;
+       <mat-icon style="vertical-align:middle; height:16px; width:16px; font-size:16px; ; color:blue" >info_outline</mat-icon>&nbsp;<a class= "passwordrules" >Password rules:</a><br><br>
+    </a> 
+ 
+    <a *ngIf="pwhint" class="desc-box" >
+      <p class="textleft">
+       <b>Your password must follow these 6 rules:</b><br>
+       &nbsp;&nbsp;1. Must be between 8 and 30 characters.<br>
+       &nbsp;&nbsp;2. Must contain at least one uppercase (capital) letter (eg. A,B,etc.)<br>
+       &nbsp;&nbsp;3. Must contain at least one lowercase letter.<br>
+       &nbsp;&nbsp;4. Must contain at least one number digit (eg: 0,1,2,3 etc.)<br>
+       &nbsp;&nbsp;5. Must contain at least one special character from the set: ! @ # $ % ^ & *  ( ) - _<br>
+       &nbsp;&nbsp;6. Must not contain any other characters
+      </p>
+    </a>
+
+</form>
+<br><br><br><br><br><br>
