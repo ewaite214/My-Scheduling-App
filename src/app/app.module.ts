@@ -45,13 +45,72 @@ import {
 } from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
 import {MyService} from './services/my-service.service';
-import { AppComponent } from './app.component';
+
+// COMPONENTS
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './login/login.component';
+import {SignupComponent} from './signup/signup.component';
+import {NavigationService} from './navigation.service';
+import {BackButtonDirective} from './back-button.directive';
 import { HelloComponent } from './hello.component';
 
+// ROUTING
+const appRoutes: Routes = [
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'signup', component: SignupComponent},
+  {path: '**', component: LoginComponent}
+];
+
+// MODULES
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports: [
+      BrowserAnimationsModule,
+      BrowserModule,
+      FormsModule,
+      MatAutocompleteModule,
+      MatBadgeModule,
+      MatBottomSheetModule,
+      MatButtonModule,
+      MatButtonToggleModule,
+      MatCardModule,
+      MatCheckboxModule,
+      MatDatepickerModule,
+      MatDialogModule,
+      MatDividerModule,
+      MatExpansionModule,
+      MatGridListModule,
+      MatIconModule,
+      MatInputModule,
+      MatListModule,
+      MatMenuModule,
+      MatNativeDateModule,
+      MatMomentDateModule,
+      MatPaginatorModule,
+      MatRadioModule,
+      MatRippleModule,
+      MatSelectModule,
+      MatSidenavModule,
+      MatSliderModule,
+      MatSlideToggleModule,
+      MatSnackBarModule,
+      MatStepperModule,
+      MatTableModule,
+      MatTabsModule,
+      MatToolbarModule,
+      MatTooltipModule,
+      FlexLayoutModule,
+      ReactiveFormsModule,
+      // ROUTING
+      RouterModule.forRoot(
+          appRoutes,
+          //  { enableTracing: true } // <-- debugging purposes only
+      )
+  ],  // end imports
+  declarations: [AppComponent, HomeComponent, LoginComponent, SignupComponent, HelloComponent ],    bootstrap: [AppComponent],
   providers: [MyService, NavigationService, {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
-  bootstrap:    [ AppComponent ]
+  entryComponents: [LoginComponent]    
 })
 export class AppModule { }
